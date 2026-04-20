@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&family=Outfit:wght@100;400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: "Outfit", sans-serif;
+  
+  --color-accent: #FFD700;
+  --color-premium-black: #1A1A1A;
+}
+
+:root {
+  --background: #fdfdfd;
+  --foreground: #111111;
+  --accent: #FFD700;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Premium Component Classes */
+.btn-premium {
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: 900;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border: none;
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+
+.btn-premium:active {
+  transform: scale(0.95);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.02);
+  border-radius: 2.5rem;
+}
+
+.admin-label {
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #9ca3af;
+}
+
+.premium-input {
+  width: 100%;
+  background: rgba(249, 250, 251, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.premium-input:focus {
+  background: white;
+  border-color: rgba(253, 224, 71, 0.5);
+  box-shadow: 0 0 0 4px rgba(253, 224, 71, 0.1);
+}
+
+.sidebar-container {
+  width: 280px;
+  height: 100vh;
+  background: #fafafa;
+  border-right: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+  z-index: 50;
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  color: #6b7280;
+  text-decoration: none !important;
+}
+
+.sidebar-nav-item:hover {
+  background: #f9fafb;
+  color: black;
+}
+
+.sidebar-nav-item.active {
+  background: #fefce8;
+  color: #854d0e;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
