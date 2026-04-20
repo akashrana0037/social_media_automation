@@ -33,3 +33,8 @@ frontend/.next/
 frontend/out/
 *.log
 .gemini/
+
+# Exclude Specific Workspaces
+"Vyom The Super coder"/
+Vyom\ The\ Super\ coder/
+vyom_the_super_coder/
